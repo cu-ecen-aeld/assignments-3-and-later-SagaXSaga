@@ -5,6 +5,9 @@
 set -e
 set -u
 
+make clean
+CROSS_COMPILE="" make default
+
 NUMFILES=10
 WRITESTR=AELD_IS_FUN
 WRITEDIR=/tmp/aeld-data
