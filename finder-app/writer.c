@@ -18,7 +18,6 @@ int main(int argc , char* argv[]) {
     } else {
         fputs(argv[2], file);   // Write the string provided as the second command line argument to the file using fprintf
         syslog(LOG_DEBUG, "Writing %s to %s", argv[2], argv[1]);   // Log a debug message indicating the string being written to the file
-        closelog();             // Close the syslog
         fclose(file);           // Close the file
     }
 }
