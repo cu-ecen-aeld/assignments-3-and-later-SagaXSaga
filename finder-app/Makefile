@@ -1,7 +1,6 @@
-##
 
-writer: 
+default:
 	$(CROSS_COMPILE)gcc writer.c -o writer
-clean:
-	rm -rf writer *.o
 
+clean:
+	rm -rf *.o writer
