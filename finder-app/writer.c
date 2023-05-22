@@ -7,7 +7,7 @@ int main(int argc , char* argv[]) {
     openlog(argv[0], LOG_PERROR, LOG_USER);   // Initialize syslog with identity "slog" and specify LOG_DEBUG and LOG_ERR as logging priorities, using LOG_USER facility
 
     if (argc < 2) {             // Check if the number of command line arguments is less than 3
-        syslog(LOG_ERR, "need 2 argument", argc);   // Log an error message using syslog
+        syslog(LOG_ERR, "need 2 argument");   // Log an error message using syslog
         exit(1);                // Exit the program with an error code of 1
     }
 

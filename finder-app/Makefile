@@ -1,6 +1,5 @@
-SOURCE = ./writer.c
-OUTPUT = writer
-
+default:
+	gcc writer.c -o writer
 all:
 	gcc writer.c -o writer
 
