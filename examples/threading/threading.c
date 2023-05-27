@@ -8,6 +8,17 @@
 //#define DEBUG_LOG(msg,...) printf("threading: " msg "\n" , ##__VA_ARGS__)
 #define ERROR_LOG(msg,...) printf("threading ERROR: " msg "\n" , ##__VA_ARGS__)
 
+int msleep(long msec)
+{
+    struct timespec ts;
+    if (msec < 0) {
+        return -1;
+    }
+    ts.tv_sec = msec / 1000;
+    ts.tv_nsec = (msec % 1000) * 1000000;
+    return nanosleep(&ts, &ts);
+}
+
 void* threadfunc(void* thread_param)
 {
 
