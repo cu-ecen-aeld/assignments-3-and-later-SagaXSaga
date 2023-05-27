@@ -62,9 +62,10 @@ bool start_thread_obtaining_mutex(pthread_t *thread, pthread_mutex_t *mutex,int 
     
     int err = pthread_create(thread, NULL, threadfunc, (void*)td);
     if(err){
-    	return false
-    }else{
-    	return true
+    	return false;
+    }
+    else{
+    	return true;
     }   
 }
 
