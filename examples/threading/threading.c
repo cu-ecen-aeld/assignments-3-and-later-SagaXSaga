@@ -44,7 +44,6 @@ bool start_thread_obtaining_mutex(pthread_t *thread, pthread_mutex_t *mutex,int 
      *
      * See implementation details in threading.h file comment block
      */
-    static int thread_number = 0;
     struct thread_data *td = calloc(1, sizeof(struct thread_data));
     td->wait_to_obtain_ms = wait_to_obtain_ms;
     td->wait_to_release_ms = wait_to_release_ms;
