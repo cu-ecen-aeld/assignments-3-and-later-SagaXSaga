@@ -1,16 +1,13 @@
-CC=$(CROSS_COMPILE)gcc
-CFLAGS += -Wall
-CFLAGS += -Werror
+CC=gcc
+CFLAGS=-Wall
 
-ifeq ($(DEBUG),true)
-	CFLAGS += -g
-endif
+SRC=aesdsocket.c
+OUTPUT=aesdsocket
 
-default: aesdsocket
-all: aesdsocket
+all: clean $(OUTPUT)
 
-aesdsocket: aesdsocket.c 
-	$(CC)$(CFLAGS) -o aesdsocket.c aesdsocket
+aesdsocket: $(SRC)
+	$(CROSS_COMPILE)$(CC) $(CFLAGS) -o $(OUTPUT) $(SRC)
 
 clean:
 	rm -rf *.o aesdsocket
