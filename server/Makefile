@@ -9,8 +9,8 @@ endif
 default: aesdsocket
 all: aesdsocket
 
-aesdsocket: 
-	$(CC)$(CFLAGS) aesdsocket.c -o aesdsocket
+aesdsocket: aesdsocket.c 
+	$(CC)$(CFLAGS) -o aesdsocket.c aesdsocket
 
 clean:
 	rm -rf *.o aesdsocket
